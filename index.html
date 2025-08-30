@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to My Site</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+      text-align: center;
+      overflow: hidden;
+    }
+    .container {
+      animation: fadeIn 2s ease-in-out;
+    }
+    h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      opacity: 0.9;
+    }
+    .btn {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 30px;
+      background: white;
+      color: #2575fc;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #f1f1f1;
+      transform: scale(1.05);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .floating-shape {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.3;
+      animation: float 10s infinite ease-in-out alternate;
+    }
+    .shape1 { width: 200px; height: 200px; background: #fff; top: 10%; left: 20%; }
+    .shape2 { width: 150px; height: 150px; background: #000; bottom: 15%; right: 25%; }
+    @keyframes float {
+      from { transform: translateY(0); }
+      to { transform: translateY(-30px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="floating-shape shape1"></div>
+  <div class="floating-shape shape2"></div>
+  <div class="container">
+    <h1>🌟 Welcome to My Site 🌟</h1>
+    <p>Glad to have you here. Stay tuned for something amazing!</p>
+    <button class="btn" onclick="alert('Thanks for visiting!')">Click Me</button>
+  </div>
+</body>
+</html>
